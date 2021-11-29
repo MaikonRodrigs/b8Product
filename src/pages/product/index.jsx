@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   ProductImageContainer,
@@ -9,26 +9,36 @@ import {
   ProductPriceOld,
   ProductPrice,
   ProductPriceDetails,
-  ProductAddToCard
+  ProductAddToCard,
+  WishlistAdd
 } from './styles';
 // import ProductImg from '../../assets/images/product.jpg'
 
-interface priceProps {
-  product_img: string;
-  description: string;
-  price_old: string;
-  price?: string;
-  price_details?: string;
-}
 
-const Product = (props: priceProps) => {
+const Product = (props) => {
+  const [addCart, setAddCart] = useState();
+  const handleAddToCart = () => {
+    setTimeout(() => {
+      setAddCart(!addCart);
+      return (
+        <ProductAddToCard />
+      )
+    }, 300);
+  }
+
+
+
   const { product_img, description, price_old, price, price_details } = props;
   return (
     <Container>
       <ProductImageContainer>
         <ProductImage src={product_img} />
-        <WishlistContainer>
-          <Wishlist />
+        <WishlistContainer onClick={handleAddToCart} className={addCart ? 'active' : ''}>
+          {addCart ?
+            <WishlistAdd />
+            :
+            <Wishlist />
+          }
         </WishlistContainer>
       </ProductImageContainer>
       <ProductDescription>
@@ -38,8 +48,12 @@ const Product = (props: priceProps) => {
       <ProductPriceOld>R$ {price_old}</ProductPriceOld>
       <ProductPrice>{price}</ProductPrice>
       <ProductPriceDetails>em até <strong>10x de R$ {price_details}</strong> sem juros</ProductPriceDetails>
-      <ProductAddToCard>
-        ADICIONAR
+      <ProductAddToCard onClick={handleAddToCart}>
+        {addCart ?
+          'ADICIONADO'
+          :
+          'ADICIONAR'
+        }
       </ProductAddToCard>
     </Container>
   )

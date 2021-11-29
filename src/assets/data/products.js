@@ -16,8 +16,8 @@ const ProductsJson = {
       description:
         "Monitor LED 29'' Gamer Curvo Samsung  1920 x 1080 FHD 240 Hz HDMI, DP, Gsync Série CRG50",
       price_old: "2.813,99",
-      price: "2.599,00",
-      price_details: "259,90",
+      price: "6.599,00",
+      price_details: "659,90",
       id: "aj124g",
     },
     {
@@ -25,8 +25,8 @@ const ProductsJson = {
       description:
         "Monitor LED 29'' Gamer Curvo Samsung  1920 x 1080 FHD 240 Hz HDMI, DP, Gsync Série CRG50",
       price_old: "2.813,99",
-      price: "2.599,00",
-      price_details: "259,90",
+      price: "3.599,00",
+      price_details: "359,90",
       id: "aj124g",
     },
   ],

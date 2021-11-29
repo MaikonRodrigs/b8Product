@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FavoriteBorder } from "@styled-icons/material/FavoriteBorder";
+import { Favorite} from '@styled-icons/material/Favorite';
 
 export const Container = styled.div`
   position: relative;
@@ -30,8 +31,15 @@ export const WishlistContainer = styled.div`
   border-radius: 50%;
   color: #000;
   cursor: pointer;
-  transition: all 0.2s linear;
+  transition: all 0.5s linear;
   transition-delay: 0.1s;
+
+  &.active {
+    color: #fff;
+    background: #da4b4f;
+    transform: rotate(360deg);
+    transition: all 0.5s linear;
+  }
 
   &:hover {
     background: #fee5ec;
@@ -39,6 +47,10 @@ export const WishlistContainer = styled.div`
   }
 `;
 export const Wishlist = styled(FavoriteBorder)`
+  width: 2.4rem;
+  height: 2.4rem;
+`;
+export const WishlistAdd = styled(Favorite)`
   width: 2.4rem;
   height: 2.4rem;
 `;

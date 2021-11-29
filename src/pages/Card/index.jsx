@@ -18,8 +18,8 @@ const Card = () => {
                 product_img={d.product_img}
                 description={d.description}
                 price_old={d.price_old}
-                price="2.599,00"
-                price_details="259,90"
+                price={d.price}
+                price_details={d.price_details}
               />
             )
           }
