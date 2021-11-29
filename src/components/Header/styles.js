@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
-  height: 4rem;
-  background: var(--primary);
   position: absolute;
-  border-radius: .8rem .8rem 0 0;
+  top: 10rem;
+  left: 48%;
+  right: 0;
+  @media (max-height: 1024px) {
+    top: 2rem;
+    left: 45%;
+  }
 `;
-export const Navbar = styled.div``;
-export const Logo = styled.div``;
-export const Menu = styled.div``;
+export const Logo = styled.img``;
+export const Slogan = styled.div`
+  margin-left: -2.1rem;
+  color: #000;
+  margin-top: 1rem;
+`;
