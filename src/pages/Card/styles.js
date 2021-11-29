@@ -7,7 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  @media (max-height: 960px) {
+  @media (max-width: 960px) {
     height: auto;
   }
 `;
@@ -19,7 +19,7 @@ export const Row = styled.div`
   justify-content: center;
   align-items: center;
   
-  @media (max-height: 960px) {
+  @media (max-width: 960px) {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     margin: 10rem 0;

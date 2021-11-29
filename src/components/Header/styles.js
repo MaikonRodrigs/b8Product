@@ -5,7 +5,7 @@ export const Container = styled.div`
   top: 10rem;
   left: 48%;
   right: 0;
-  @media (max-height: 1024px) {
+  @media (max-width: 1024px) {
     top: 2rem;
     left: 45%;
   }

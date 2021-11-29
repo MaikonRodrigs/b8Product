@@ -9,7 +9,7 @@ export const Container = styled.div`
   bottom: 2rem;
   left: 0;
   right: 0;
-  @media (max-height: 1024px) {
+  @media (max-width: 1024px) {
     /* display: none; */
     position: relative;
   }
