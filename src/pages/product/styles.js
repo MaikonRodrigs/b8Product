@@ -100,6 +100,9 @@ export const ProductAddToCard = styled.div`
   font-weight: 700;
   letter-spacing: -0.4%;
 
+  &.active {
+    opacity: .8;
+
   &:hover {
     background: #1c6c3e;
   }

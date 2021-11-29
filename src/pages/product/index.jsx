@@ -48,12 +48,14 @@ const Product = (props) => {
       <ProductPriceOld>R$ {price_old}</ProductPriceOld>
       <ProductPrice>{price}</ProductPrice>
       <ProductPriceDetails>em até <strong>10x de R$ {price_details}</strong> sem juros</ProductPriceDetails>
-      <ProductAddToCard onClick={handleAddToCart}>
+      <ProductAddToCard onClick={handleAddToCart} className={addCart ? 'active' : ''}>
         {addCart ?
           'ADICIONADO'
           :
           'ADICIONAR'
         }
+
+
       </ProductAddToCard>
     </Container>
   )
